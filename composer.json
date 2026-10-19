@@ -1,6 +1,6 @@
 {
-    "name": "silvershop/search-meilisearch",
-    "description": "Meilisearch engine adapter for silvershop/search: typo-tolerant, relevance-ranked product search via a self-hosted Meilisearch.",
+    "name": "silvershop-suite/search-meilisearch",
+    "description": "Meilisearch engine adapter for silvershop-suite/search: typo-tolerant, relevance-ranked product search via a self-hosted Meilisearch.",
     "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "silvershop", "ecommerce", "search", "meilisearch"],
     "license": "BSD-3-Clause",
@@ -19,7 +19,7 @@
         "silverstripe/framework": "^6.0",
         "silverstripe/cms": "^6.0",
         "silvershop/core": "^6",
-        "silvershop/search": "dev-main",
+        "silvershop-suite/search": "dev-main",
         "guzzlehttp/guzzle": "^7"
     },
     "require-dev": {

@@ -1,12 +1,12 @@
 # SilverShop Search — Meilisearch
 
 A [Meilisearch](https://www.meilisearch.com/) engine adapter for
-[`silvershop/search`](https://github.com/silvershop/silvershop-search): typo-tolerant, relevance-ranked product
+[`silvershop-suite/search`](https://github.com/silvershop/silvershop-search): typo-tolerant, relevance-ranked product
 search, as a drop-in replacement for the built-in database backend.
 
 ## Requirements
 
-- `silvershop/search` `^1` (the search framework)
+- `silvershop-suite/search` `^1` (the search framework)
 - A reachable **Meilisearch** server (self-hosted — a single binary)
 
 ## Running Meilisearch
@@ -56,7 +56,7 @@ Keep Meilisearch bound to localhost (behind your app) and use a long random `MEI
 ## Installation
 
 ```bash
-composer require silvershop/search-meilisearch
+composer require silvershop-suite/search-meilisearch
 ```
 
 Point it at your Meilisearch and make it the active backend:
@@ -86,7 +86,7 @@ Run `dev/build?flush=1` first so the config + extension load.
 - Products are indexed on **publish** and removed on **unpublish / delete** (`ProductSyncExtension`), and the
   **`meilisearch-reindex`** task does a full (re)build plus pushes the index settings.
 - A search runs against Meilisearch and returns the matching products **in Meili's relevance order**; the SearchPage
-  controller paginates them as usual — no change to `silvershop/search`.
+  controller paginates them as usual — no change to `silvershop-suite/search`.
 - Indexed fields: `Title`, `InternalItemID` (SKU), `Model`, `Content` (searchable, weighted in that order) and
   `BasePrice` / `CreatedTimestamp` / `Title` (sortable). You get typo-tolerance, relevance ranking and instant-search
   speed out of the box — the gaps the DB backend has.
@@ -95,7 +95,7 @@ Run `dev/build?flush=1` first so the config + extension load.
 ## Facets
 
 All registered facets (category / price / brand / rating / colour / attributes / stock) work unchanged with the
-Meilisearch backend: Meili does the typo-tolerant text match + ranking, then `silvershop/search`'s facet framework
+Meilisearch backend: Meili does the typo-tolerant text match + ranking, then `silvershop-suite/search`'s facet framework
 applies the selected filters and counts options over the matched products. No per-facet configuration needed.
 
 ## Relevance & synonyms

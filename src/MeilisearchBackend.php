@@ -21,10 +21,11 @@ use SilverStripe\SiteConfig\SiteConfig;
  * Meilisearch-backed {@link SearchBackend}: typo-tolerant, relevance-ranked product search.
  *
  * Products are indexed (by {@link index()} / the reindex task / {@link ProductSyncExtension}); a query lets Meilisearch
- * do the typo-tolerant text match + relevance ranking, then reuses silvershop/search's {@link FacetApplier} to apply
- * the selected facets and count their options over the matched set — so every registered facet works, unchanged, with
- * no per-facet engine mapping. Results come back in Meili's rank order (for relevance) and the SearchPage controller
- * paginates them (no change needed in silvershop/search). Native Meili facetDistribution is a later optimisation.
+ * do the typo-tolerant text match + relevance ranking, then reuses silvershop-suite/search's {@link FacetApplier} to
+ * apply the selected facets and count their options over the matched set — so every registered facet works, unchanged,
+ * with no per-facet engine mapping. Results come back in Meili's rank order (for relevance) and the SearchPage
+ * controller paginates them (no change needed in silvershop-suite/search). Native Meili facetDistribution is a later
+ * optimisation.
  */
 class MeilisearchBackend implements SearchBackend
 {

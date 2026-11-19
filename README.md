@@ -1,7 +1,7 @@
 # SilverShop Search — Meilisearch
 
 A [Meilisearch](https://www.meilisearch.com/) engine adapter for
-[`silvershop-suite/search`](https://github.com/silvershop/silvershop-search): typo-tolerant, relevance-ranked product
+[`silvershop-suite/search`](https://github.com/silvershop-suite/silvershop-search): typo-tolerant, relevance-ranked product
 search, as a drop-in replacement for the built-in database backend.
 
 ## Requirements

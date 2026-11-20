@@ -19,7 +19,7 @@
         "silverstripe/framework": "^6.0",
         "silverstripe/cms": "^6.0",
         "silvershop/core": "^6",
-        "silvershop-suite/search": "dev-main",
+        "silvershop-suite/search": "^1.7",
         "guzzlehttp/guzzle": "^7"
     },
     "require-dev": {
@@ -34,12 +34,6 @@
         "lint": "vendor/bin/phpcs",
         "lint:fix": "vendor/bin/phpcbf"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/silvershop-suite/silvershop-search.git"
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-main": "1.x-dev"
